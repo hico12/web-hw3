@@ -19,8 +19,6 @@ function best(list) {
 
     return top;
 }
-
-
 console.log("최고:", best(movies));
 
 
