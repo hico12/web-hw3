@@ -26,12 +26,28 @@ body { background: linear-gradient(135deg, #141e30, #243b55); min-height: 100vh;
 
 
 
+
 .board {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
     justify-content: center;
-    gap: 12px;
 }
+
+
+@media (max-width: 800px) {
+    .board {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 500px) {
+    .board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 
 .top ul{
     display: flex;
